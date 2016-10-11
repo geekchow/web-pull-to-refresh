@@ -7,6 +7,10 @@ body {
 	margin: 0;
 }
 
+#ptr__container {
+	min-height: 100%;
+}
+
 #ptr {
 	position: absolute;
 	width: 100%;
@@ -17,12 +21,9 @@ body {
 	transform: translateY(-100%);
 }
 
+
 #content {
 	min-height: 100%;
-}
-
-.ptr-loading #content, .ptr-loading #ptr {
-	transition: all .25s ease;
 }
 
 .ptr-reset #content, .ptr-reset #ptr {
