@@ -7,7 +7,6 @@
 
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 
-        <link rel="stylesheet" href="lib/genericons/genericons.css">
         <link rel="stylesheet" href="base.css">
     </head>
 
@@ -26,23 +25,7 @@
 
         <script>
             window.onload = function() {
-                WebPullToRefresh.init( {
-                    loadingFunction: exampleLoadingFunction
-                } );
-            };
-
-            // Just an example loading function that returns a
-            // promise that WebPullToRefresh can use.
-            var exampleLoadingFunction = function() {
-                return new Promise( function( resolve, reject ) {
-                    // Run some async loading code here
-
-                    if ( true /* if the loading worked */ ) {
-                        resolve();
-                    } else {
-                        reject();
-                    }
-                } );
+                WebPullToRefresh.init();
             };
         </script>
     </body>

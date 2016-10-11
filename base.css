@@ -29,8 +29,3 @@ body {
 .ptr-reset #content, .ptr-reset #ptr {
 	transition: all 0.67s ease 0.67s;
 }
-
-.ptr-reset #content {
-	-webkit-transform: translate3d( 0, 0, 0 );
-	transform: translate3d( 0, 0, 0 );
-}
