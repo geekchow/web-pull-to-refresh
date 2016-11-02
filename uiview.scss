@@ -1,0 +1,76 @@
+/* move from / to  */
+
+@-webkit-keyframes leave-forward {
+    from {} to {
+        -webkit-transform: translateZ(-1);
+    }
+}
+@keyframes leave-forward {
+    from {} to {
+        transform: translateZ(-1);
+    }
+}
+@-webkit-keyframes enter-backward {
+    from {
+        -webkit-transform: translateX(0);
+    }
+}
+@keyframes enter-backward {
+    from {
+        transform: translateX(0);
+    }
+}
+@-webkit-keyframes leave-backward {
+    from {
+        -webkit-transform: translateX(30%);
+    } to {
+        -webkit-transform: translateX(100%);
+    }
+}
+@keyframes leave-backward {
+    from {
+        transform: translateX(30%);
+    } to {
+        transform: translateX(100%);
+    }
+}
+@-webkit-keyframes enter-forward {
+    from {
+        -webkit-z-index:20;
+        -webkit-transform: translateX(30%);
+    }
+}
+@keyframes enter-forward {
+    from {
+        z-index: 20;
+        transform: translateX(30%);
+    }
+}
+.view--move_money {
+    position: relative;
+    [ui-view].ng-enter, &[ui-view].ng-leave {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    [ui-view].ng-enter {
+        -webkit-animation: enter-forward .4s ease both;
+        animation: enter-forward .4s ease both;
+    }
+    /*[ui-view].ng-enter-active {}*/
+    
+    [ui-view].ng-leave {
+        -webkit-animation: leave-forward .4s ease both;
+        animation: leave-forward .4s ease both;
+    }
+    /*[ui-view].ng-leave-active {}*/
+    
+    [ui-view].ng-enter.backward {
+        -webkit-animation: enter-backward .4s ease both;
+        animation: enter-backward .4s ease both;
+    }
+    [ui-view].ng-leave.backward {
+        -webkit-animation: leave-backward .4s ease both;
+        animation: leave-backward .4s ease both;
+    }
+}
