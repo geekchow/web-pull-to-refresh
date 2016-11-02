@@ -1,13 +1,17 @@
 /* move from / to  */
 
 @-webkit-keyframes leave-forward {
-    from {} to {
-        -webkit-transform: translateZ(-1);
+    from {
+        -webkit-transform: translateZ(-20);
+    } to {
+         -webkit-transform: translateZ(-20);
     }
 }
 @keyframes leave-forward {
-    from {} to {
-        transform: translateZ(-1);
+    from {
+        transform: translateZ(-20);
+    } to {
+        transform: translateZ(-20);
     }
 }
 @-webkit-keyframes enter-backward {
@@ -39,11 +43,17 @@
         -webkit-z-index:20;
         -webkit-transform: translateX(30%);
     }
+    to {
+        -webkit-z-index:20;
+    }
 }
 @keyframes enter-forward {
     from {
         z-index: 20;
         transform: translateX(30%);
+    }
+    to {
+        z-index: 20;
     }
 }
 .view--move_money {
